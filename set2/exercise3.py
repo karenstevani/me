@@ -46,9 +46,9 @@ def fix_it(moves=True, should_move=True):
     if moves == should_move:
         return "No Problem"
     elif moves == True and should_move == False:
-            return "duct tape"
-    elif moves == False and should_move == True:
             return "WD-40"
+    elif moves == False and should_move == True:
+            return "Duct Tape"
 
 
 def loops_preview():

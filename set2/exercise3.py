@@ -8,6 +8,13 @@ Modify each function until the tests pass.
 
 
 def is_odd(a_number):
+    remainder = a_number % 2
+
+    if remainder == 1:
+        result = True
+
+    if remainder == 0:
+        result = False
     """Return True if a_number is odd, and False if a_number is even.
 
     Look into modulo division using the '%' operator as one way of doing this.
@@ -18,7 +25,7 @@ def is_odd(a_number):
 
     So if a_number modulo two is zero, then it's even.
     """
-    return None
+    return result
 
 
 def fix_it(moves=True, should_move=True):
@@ -36,7 +43,12 @@ def fix_it(moves=True, should_move=True):
     Most people write this function with 4 return statements.
     As an extra challenge, see if you can get that down to three.
     """
-    return None
+    if moves == should_move:
+        return "No Problem"
+    elif moves == True and should_move == False:
+            return "duct tape"
+    elif moves == False and should_move == True:
+            return "WD-40"
 
 
 def loops_preview():
@@ -59,10 +71,17 @@ def loops_1a():
     return a list of 10 items, each one a string with exacly one star in it.
     E.g.: ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*']
     """
-    return None
+    star_list = []
+    for i in range(10):
+        star_list.append("*")
+    return star_list
 
 
 def loops_1c(number_of_items=5, symbol="#"):
+    
+    symbol_list = []
+    for i in range(number_of_items):
+        symbol_list.append(symbol)
     """Respond to variables.
 
     Return a list of number_of_items items, each one a
@@ -72,7 +91,7 @@ def loops_1c(number_of_items=5, symbol="#"):
     Remember that you're being passed arguments here. Don't hard code the number
     or the symbol, let it be whatever it wants to be.
     """
-    return None
+    return symbol_list
 
 
 def loops_2_preview():

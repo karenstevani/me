@@ -79,10 +79,6 @@ def loops_1a():
 
 
 def loops_1c(number_of_items=5, symbol="#"):
-    
-    symbol_list = []
-    for i in range(number_of_items):
-        symbol_list.append(symbol)
     """Respond to variables.
 
     Return a list of number_of_items items, each one a
@@ -92,6 +88,9 @@ def loops_1c(number_of_items=5, symbol="#"):
     Remember that you're being passed arguments here. Don't hard code the number
     or the symbol, let it be whatever it wants to be.
     """
+    symbol_list = []
+    for i in range(number_of_items):
+        symbol_list.append(symbol)
     return symbol_list
 
 

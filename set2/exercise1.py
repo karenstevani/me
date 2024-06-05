@@ -46,5 +46,3 @@ def usefulFunction():
 
 
 usefulFunction()
-
-done 

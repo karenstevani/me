@@ -8,13 +8,6 @@ Modify each function until the tests pass.
 
 
 def is_odd(a_number):
-    remainder = a_number % 2
-
-    if remainder == 1:
-        result = True
-
-    if remainder == 0:
-        result = False
     """Return True if a_number is odd, and False if a_number is even.
 
     Look into modulo division using the '%' operator as one way of doing this.
@@ -25,6 +18,14 @@ def is_odd(a_number):
 
     So if a_number modulo two is zero, then it's even.
     """
+    remainder = a_number % 2
+
+    if remainder == 1:
+        result = True
+
+    if remainder == 0:
+        result = False
+
     return result
 
 

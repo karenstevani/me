@@ -133,7 +133,13 @@ def loops_2():
             ['*', '*', '*', '*', '*', '*', '*', '*', '*', '*'],
           ]
     """
-    return None
+    field = []
+    for i in range(10):
+        row = []
+        for j in range(10):
+            row.append("*")
+        field.append(row)
+    return field
 
 
 def loops_3():
@@ -157,7 +163,13 @@ def loops_3():
     TIP: notice that this needs to to return strings of numbers,
          so call str(number) to cast.
     """
-    return None
+    field = []
+    for i in range(10):
+        row = []
+        for j in range(10):
+            row.append(i)
+        field.append(row)
+    return field
 
 
 def loops_4():
@@ -177,7 +189,13 @@ def loops_4():
       ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     ]
     """
-    return None
+    field = []
+    for i in range(10):
+        row = []
+        for j in range(10):
+            row.append(j)
+        field.append(row)
+    return field
 
 
 def loops_5():

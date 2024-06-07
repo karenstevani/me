@@ -284,6 +284,10 @@ def loops_7():
     This is a hard problem. Use lots of experimentation and draw
     lots of diagrams!
     """
+    field = []
+    for i in range(5):
+        row = []
+        
     return None
 
 

@@ -225,7 +225,13 @@ def loops_5():
         f"There are {num_bottles} green bottles"
     you'll come to see the pros and cons of each over time.
     """
-    return None
+    field = []
+    for i in range(10):
+        row = []
+        for j in range(5):
+            row.append(f"(i{i}, j{j})")
+        field.append(row)
+    return field
 
 
 def loops_6():
@@ -248,7 +254,13 @@ def loops_6():
     You can use a variable.
     TIP: look out for the starting condition.
     """
-    return None
+    field = []
+    for i in range(10):
+        row = []
+        for j in range(i+1):
+            row.append(f"{j}")
+        field.append(row)
+    return field
 
 
 def loops_7():

@@ -287,8 +287,13 @@ def loops_7():
     field = []
     for i in range(5):
         row = []
-        
-    return None
+        for j in range(9):
+            if j < 4 - i or j > i + 4:
+                row.append(" ")
+            else:
+                row.append("*")
+        field.append(row)
+    return field
 
 
 if __name__ == "__main__":

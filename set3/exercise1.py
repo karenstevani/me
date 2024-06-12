@@ -37,8 +37,8 @@ def two_step_ranger(start, stop):
     step = 2
     my_range = []
     while i < stop:
-         my_range.append(i)
-         i = i + step
+        my_range.append(i)
+        i = i + step
     return my_range
 
 
@@ -52,7 +52,7 @@ def stubborn_asker(low, high):
     """
     i = int(input("input a number"))
     while i < low or i == low or i == high or i > high:
-         i = int(input("input a number"))
+        i = int(input("input a number"))
     return i
 
 
@@ -64,9 +64,14 @@ def not_number_rejector(message):
     When you do get a number, return it.
     """
 
-    i = input("input a number")
-    while i
-    return i
+    
+    while True:
+        i = input(message)
+        try:
+            p=int(i)
+            return p
+        except ValueError as my_error:
+            print(f"{i} wasn't a number {my_error}")
 
 
 def super_asker(low, high):

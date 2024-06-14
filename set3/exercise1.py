@@ -71,7 +71,7 @@ def not_number_rejector(message):
             p=int(i)
             return p
         except ValueError as my_error:
-            print(f"{i} wasn't a number {my_error}")
+            print(f"{i} isn't a number {my_error}")
 
 
 def super_asker(low, high):
@@ -80,6 +80,19 @@ def super_asker(low, high):
     Combine what you learnt from stubborn_asker and not_number_rejector
     to make a function that does it all!
     """
+    
+    while True:
+        try:
+            i = input("please input a number")
+            p=int(i)
+            if p < low or p == low or p == high or p > high:
+                print(f"{p} isn't in the range")
+                i = input("input a number")
+            else:
+                return i
+        except ValueError as my_error:
+            print(f"{i} isn't a number {my_error}")
+
     return None
 
 

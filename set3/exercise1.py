@@ -81,13 +81,13 @@ def super_asker(low, high):
     to make a function that does it all!
     """
     
+
     while True:
+        i = input("Please input a number")
         try:
-            i = input("please input a number")
             p=int(i)
             if p < low or p == low or p == high or p > high:
                 print(f"{p} isn't in the range")
-                i = input("input a number")
             else:
                 return i
         except ValueError as my_error:

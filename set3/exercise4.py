@@ -23,9 +23,29 @@ def binary_search(low, high, actual_number):
     """
     tries = 0
     guess = 0
+    guessed = False
 
-    # Write your code in here
-
+    while not guessed:
+        guessedNumber = input("input a guess number")
+        try:
+            guessedNumber =int(guessedNumber)  
+            print(f"You guessed {guessedNumber},")
+            if guessedNumber == actual_number:
+                print(f"You got it!! It was {actual_number}")
+                tries = tries + 1
+                guess = actual_number
+                guessed = True
+            elif guessedNumber < actual_number:
+                print("Your value is too small, try again!")
+                high = guessedNumber
+                tries = tries + 1
+            else:
+                print("Your value is too large, try again!")
+                tries = tries + 1
+                low = guessedNumber
+        except ValueError as my_error:
+                print(f"{guessedNumber} is not a number")
+                tries = tries + 1
     return {"guess": guess, "tries": tries}
 
 

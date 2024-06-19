@@ -47,9 +47,11 @@ def fix_it(moves=True, should_move=True):
     if moves == should_move:
         return "No Problem"
     elif moves == True and should_move == False:
-            return "WD-40"
-    elif moves == False and should_move == True:
             return "Duct Tape"
+    elif moves == False and should_move == True:
+            return "WD-40"
+    else:
+        return "No Problem"
 
 
 def loops_preview():
@@ -167,7 +169,7 @@ def loops_3():
     for i in range(10):
         row = []
         for j in range(10):
-            row.append(i)
+            row.append(str(i))
         field.append(row)
     return field
 
@@ -193,7 +195,7 @@ def loops_4():
     for i in range(10):
         row = []
         for j in range(10):
-            row.append(j)
+            row.append(str(j))
         field.append(row)
     return field
 

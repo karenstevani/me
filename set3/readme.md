@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+During my set 3 activity, I developed my loop writing skills even better. This time around, I also learned how to utilise the 'while' loop, and applied it into operations for certain functions. Aside from that, I laerned how to check and ensure a right format of data inputted by the users and showcasing a response error message if not. I learned how to write a longer operation from the advanceguessinggame definition in exercise 3 too. The exercise 4 binary search is quite a struggle to do however.

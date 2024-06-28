@@ -26,7 +26,7 @@ def binary_search(low, high, actual_number):
     guessed = False
 
     while not guessed:
-        guessedNumber = (low + high) / 2 
+        guessedNumber = (low + high) // 2 
         if actual_number == guessedNumber:
             guessed = True
         elif actual_number > guessedNumber:

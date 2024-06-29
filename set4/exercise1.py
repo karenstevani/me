@@ -42,7 +42,9 @@ def get_some_details():
     data = json.loads(json_data)
     lastName = data["results"][0]["name"]["last"]
     password = data["results"][0]["login"]["password"]
-    postcodePlusID = data["results"][0]["location"]["postcode"] + data["results"][0]["id"]
+    postcode = data["results"][0]["location"]["postcode"] 
+    Identification = data["results"][0]["id"]["value"]
+    postcodePlusID = int(postcode) + int(Identification)
     return {"lastName": lastName, "password": password, "postcodePlusID": postcodePlusID}
 
 
@@ -81,6 +83,20 @@ def wordy_pyramid():
     TIP: to add an argument to a URL, use: ?argName=argVal e.g. &wordlength=
     """
     pyramid = []
+
+    for i in range (3, 10, 2):
+        url = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength=20"
+        response = requests.get(url)
+        if response.status_code == 200:
+            word = response.text
+            pyramid.append(word)
+
+    for i in range(11, 4, -2):
+        url = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength=20"
+        response = requests.get(url)
+        if response.status_code == 200: 
+            word = response.text
+            pyramid.append(word)
 
     return pyramid
 

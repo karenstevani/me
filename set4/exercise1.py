@@ -127,7 +127,6 @@ def pokedex(low=1, high=5):
                 name = url["forms"][0]["name"]
                 weight = url["weight"]
                 tallest = url["height"]
-
         id = id + 1
 
     return {"name": name, "weight": weight, "height": tallest}
@@ -151,6 +150,15 @@ def diarist():
     NOTE: this function doesn't return anything. It has the _side effect_ of modifying the file system
     """
     pass
+
+    counter = 0
+    file = open("/Users/karen/1161/me/set4/Trispokedovetiles(laser).gcode" , "r")
+    for line in file:
+        if "M10 P1" in line:
+            counter = counter + 1
+
+    write = open("/Users/karen/1161/me/set4/lasers.pew" , "w")
+    write.write(str(counter))
 
 
 if __name__ == "__main__":

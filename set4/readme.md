@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+After completing set 4, I now understand more about how to complete certain arguments and calling certain data from different sources and manipulating them. I understand how to index data better too, whether in list or dictionary. As we did exercises to extract data from lots of different sources; pc file, json library and other urls, I am still unclear about which lines to write or use to extract from which certain resources.

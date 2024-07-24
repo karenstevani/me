@@ -51,10 +51,16 @@ def wordy_pyramid():
 
 
 def get_a_word_of_length_n(length):
+    baseURL = (
+        "https://us-central1-waldenpondpress.cloudfunctions.net/"
+        "give_me_a_word?wordlength={length}")
+    
+    pyramid_list = []
     pass
 
 
 def list_of_words_with_lengths(list_of_lengths):
+    
     pass
 
 

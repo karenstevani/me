@@ -188,6 +188,9 @@ def pet_filter(letter="a") -> list:
     ]
     # fmt: on
     filtered = []
+    for item in pets:
+        if letter in item:
+            filtered.append(item)
 
     return filtered
 

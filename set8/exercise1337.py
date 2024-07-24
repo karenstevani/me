@@ -244,10 +244,20 @@ def make_filler_text_dictionary() -> dict:
     (i.e. 3, 4, 5, 6, 7 and 4 words for each)
     TIP: you'll need the requests library
     """
-
-    url = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength="
     wd = {}
-
+    length = 3
+    while length < 8:
+        no_of_words = 0
+        url = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={length}"
+        list_of_words = []
+        while no_of_words < 4:
+            r = requests.get(url).text
+            for i in range(1):
+                list_of_words.append(r)
+            no_of_words = no_of_words + 1
+        new_dict={f"{length}":list_of_words}
+        wd={**wd,**new_dict}
+        length = length + 1
     return wd
 
 
@@ -260,12 +270,16 @@ def random_filler_text(number_of_words=200) -> str:
     Return it as a string
     TIP: you'll need the random library,
         e.g. random.randint(low, high)
-    """
+    """ 
 
     my_dict = make_filler_text_dictionary()
-
     words = []
 
+    for _ in range(number_of_words):
+        length = random.randint(4, 5)
+        list = my_dict[length]
+        word = random.choice(list)
+        words.append(word)
     return " ".join(words)
 
 

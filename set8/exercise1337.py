@@ -61,23 +61,29 @@ def dictionary_please() -> dict:
 
 
 def is_it_5(some_number) -> bool:
+    if some_number == 5:
+        well_is_it = True
+    else:
+        well_is_it = False
     """Returns True if the argument passed is 5, otherwise returns False."""
-    well_is_it = None
     return well_is_it
 
 
 def take_five(some_number) -> int:
+    value = int(some_number)
+    the_answer = value - 5
     """Subtracts 5 from some_number."""
-    return None
+    return the_answer
 
 
 def greet(name="Towering Timmy") -> str:
+    the_answer = f"Well hello, {name}"
     """Return a greeting.
     return a string of "Well hello, " and the name argument.
     E.g. if given as "Towering Timmy" it should
-         return "Well hello, Towering Timmy"
+    return "Well hello, Towering Timmy"
     """
-    return None
+    return the_answer
 
 
 def one_counter(input_list=[1, 4, 1, 5, 1, 1]) -> int:
@@ -104,7 +110,7 @@ def fizz_buzz() -> List:
 
     This is the most famous basic programming test of all time!
 
-       "Write a program that prints the numbers from 1 to 100. But for
+    "Write a program that prints the numbers from 1 to 100. But for
         multiples of three print "Fizz" instead of the number and for
         the multiples of five print "Buzz". For numbers which are
         multiples of both three and five print "FizzBuzz"."
@@ -114,8 +120,8 @@ def fizz_buzz() -> List:
     Return a list that has an integer if the number isn't special,
     and a string if it is. E.g.
         [1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8,
-         'Fizz', 'Buzz',  11, 'Fizz', 13, 14,
-         'FizzBuzz', 16, 17, ...]
+        'Fizz', 'Buzz',  11, 'Fizz', 13, 14,
+        'FizzBuzz', 16, 17, ...]
     """
     fizz_buzz_list = []
     # your code here
@@ -130,7 +136,7 @@ def set_it_on_fire(input_string="very naughty boy") -> str:
     e.g. "very naughty boy" should return the string
     "🔥V🔥E🔥R🔥Y🔥 🔥N🔥A🔥U🔥G🔥H🔥T🔥Y🔥 🔥B🔥O🔥Y🔥"
     TIP: strings are pretty much lists of chars.
-         If you list("string") you get ['s', 't', 'r', 'i', 'n', 'g']
+    If you list("string") you get ['s', 't', 'r', 'i', 'n', 'g']
     TIP: consider using the 'join' method in Python.
     TIP: make sure that you have a 🔥 on both ends of the string.
     """

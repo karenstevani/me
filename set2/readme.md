@@ -4,3 +4,4 @@ The main knowledge that I gained this week would be the usage of loops. Specific
 programming vocabularies:
 calling = executing a certain function or method
 .append() = function that adds data to a list
+for loop = loop to ensure code runs again usually through a specific and stated amount of times

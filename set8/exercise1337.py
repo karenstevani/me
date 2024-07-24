@@ -10,8 +10,8 @@ import os
 import random
 import string
 import time
+from typing import Any
 import requests
-from typing import Dict, List
 
 
 def give_me_five() -> int:
@@ -21,22 +21,21 @@ def give_me_five() -> int:
 
 
 def password_please() -> str:
+    the_answer = f"Passwordforkaren"
     """Returns a string, 8 or more characters long, contains at
     least one upper case letter and one lowercase letter.
     TIP: don't put in a real password!"""
-    the_answer = f"Passwordforkaren"
     return the_answer
 
 
-def list_please() -> list:
+def list_please() -> list[Any]:
     """Returns a list, you can put anything in the list."""
     my_list = []
     for i in range(10):
         my_list.append(i)
     return my_list
 
-
-def int_list_please() -> list:
+def int_list_please() -> list[int]:
     my_list = []
     for i in range(10):
         my_list.append(int(10))
@@ -44,7 +43,7 @@ def int_list_please() -> list:
     return my_list
 
 
-def string_list_please() -> list:
+def string_list_please() -> list[str]:
     my_list = []
     for i in range(5):
         my_list.append(str("mama"))
@@ -81,7 +80,7 @@ def greet(name="Towering Timmy") -> str:
     """Return a greeting.
     return a string of "Well hello, " and the name argument.
     E.g. if given as "Towering Timmy" it should
-    return "Well hello, Towering Timmy"
+         return "Well hello, Towering Timmy"
     """
     return the_answer
 
@@ -99,22 +98,23 @@ def one_counter(input_list=[1, 4, 1, 5, 1, 1]) -> int:
 
 
 def n_counter(search_for_this, input_list=[1, 4, 1, 5, 1, 1]) -> int:
+    """Count the number of times search_for_this shows up in the input_list.
+    Return an integer.
+    """
     count = 0
     for item in input_list:
         if item == int(search_for_this):
             count = count + 1
-    """Count the number of times search_for_this shows up in the input_list.
-    Return an integer.
-    """
+
     return count
 
 
-def fizz_buzz() -> List:
+def fizz_buzz() -> list:
     """Do the fizzBuzz.
 
     This is the most famous basic programming test of all time!
 
-    "Write a program that prints the numbers from 1 to 100. But for
+       "Write a program that prints the numbers from 1 to 100. But for
         multiples of three print "Fizz" instead of the number and for
         the multiples of five print "Buzz". For numbers which are
         multiples of both three and five print "FizzBuzz"."
@@ -124,8 +124,8 @@ def fizz_buzz() -> List:
     Return a list that has an integer if the number isn't special,
     and a string if it is. E.g.
         [1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8,
-        'Fizz', 'Buzz',  11, 'Fizz', 13, 14,
-        'FizzBuzz', 16, 17, ...]
+         'Fizz', 'Buzz',  11, 'Fizz', 13, 14,
+         'FizzBuzz', 16, 17, ...]
     """
     fizz_buzz_list = []
     for i in range (1, 101):
@@ -149,17 +149,31 @@ def set_it_on_fire(input_string="very naughty boy") -> str:
     e.g. "very naughty boy" should return the string
     "🔥V🔥E🔥R🔥Y🔥 🔥N🔥A🔥U🔥G🔥H🔥T🔥Y🔥 🔥B🔥O🔥Y🔥"
     TIP: strings are pretty much lists of chars.
-    If you list("string") you get ['s', 't', 'r', 'i', 'n', 'g']
+         If you list("string") you get ['s', 't', 'r', 'i', 'n', 'g']
     TIP: consider using the 'join' method in Python.
     TIP: make sure that you have a 🔥 on both ends of the string.
     """
+    upper_string = input_string.upper()
+    the_answer = "🔥" + '🔥'.join(upper_string) + "🔥"
+
+    return the_answer
 
 
+def the_chain_gang_5(the_value) -> bool:
+    """Take the_value, subtract 5 from it, and return True if the value we end up with it 5.
 
-    return None
+    You don't get anything for free this far into the quiz, you can't
+    use the == operator or the - operator, and you must use two of the
+    functions you've already written.
+
+    TIP: you've already written a function that returns True if the value is 5
+    TIP: you've already written a function that subtracts 5
+    """
+
+    return is_it_5(take_five(the_value))
 
 
-def pet_filter(letter="a") -> List:
+def pet_filter(letter="a") -> list:
     """Return a list of pets whose name contains the character 'letter'"""
     # fmt: off
     pets = [
@@ -174,9 +188,6 @@ def pet_filter(letter="a") -> List:
     ]
     # fmt: on
     filtered = []
-    for i in range(pets):
-        if letter in pets:
-            filtered.append(str(pets))
 
     return filtered
 
@@ -197,7 +208,7 @@ def best_letter_for_pets() -> str:
     return most_popular_letter
 
 
-def make_filler_text_dictionary() -> Dict:
+def make_filler_text_dictionary() -> dict:
     """Make a dictionary of random words filler text.
     There is a random word generator here:
     https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength=4
@@ -255,6 +266,7 @@ def fast_filler(number_of_words=200) -> str:
     the internet.
     Use the filename "dict_cache.json"
     TIP: you'll need the os and json libraries
+    TIP: This is making sentences. Make the first letter capital, and add a full stop to the end.
     TIP: you'll probably want to use json dumps and loads to get the
     dictionary into and out of the file. Be careful when you read it back in,
     it'll convert integer keys to strings.
@@ -287,6 +299,8 @@ if __name__ == "__main__":
     print("n_counter:", n_counter(7))
     print("fizz_buzz:", fizz_buzz())
     print("put_behind_bars:", set_it_on_fire())
+    print("chaing gang 5", the_chain_gang_5(5))
+    print("chaing gang 5", the_chain_gang_5(10))
     print("pet_filter:", pet_filter())
     print("best_letter_for_pets:", best_letter_for_pets())
     print("make_filler_text_dictionary:", make_filler_text_dictionary())

@@ -15,7 +15,7 @@ if LOCAL != CWD:
         f"""
     Be careful that your relative paths are
     relative to where you think they are
-    LOCAL: {LOCAL}
+    LOCAL: {LOCAL} 
     CWD: "CWD
     """
     )
@@ -41,7 +41,7 @@ def get_some_details():
 
     data = json.loads(json_data)
     lastName = data["results"][0]["name"]["last"]
-    password = data["results"][0]["login"]["password"]
+    password = data["results"][0]["login"]["password"]  
     postcode = data["results"][0]["location"]["postcode"] 
     Identification = data["results"][0]["id"]["value"]
     postcodePlusID = int(postcode) + int(Identification)
@@ -84,7 +84,7 @@ def wordy_pyramid():
     """
     pyramid = []
 
-    for i in range (3, 20, 2):
+    for i in range (3, 20, 2): 
         url = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={i}"
         response = requests.get(url)
         if response.status_code == 200:

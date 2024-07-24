@@ -87,21 +87,25 @@ def greet(name="Towering Timmy") -> str:
 
 
 def one_counter(input_list=[1, 4, 1, 5, 1, 1]) -> int:
+    count = 0
+    for item in input_list:
+        if item == 1:
+            count = count + 1
     """Count the number of 1s in the input_list.
     Return an integer.
     TIP: the test will use a different input_list, so don't just return 2
     """
-    count = None
-
     return count
 
 
 def n_counter(search_for_this, input_list=[1, 4, 1, 5, 1, 1]) -> int:
+    count = 0
+    for item in input_list:
+        if item == int(search_for_this):
+            count = count + 1
     """Count the number of times search_for_this shows up in the input_list.
     Return an integer.
     """
-    count = None
-
     return count
 
 

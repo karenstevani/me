@@ -276,10 +276,9 @@ def random_filler_text(number_of_words=200) -> str:
     words = []
 
     for _ in range(number_of_words):
-        length = random.randint(4, 5)
-        list = my_dict[length]
-        word = random.choice(list)
-        words.append(word)
+        length = str(random.randint(3, 7))
+        word = random.randint(0,3)
+        words.append(my_dict[length][word])
     return " ".join(words)
 
 

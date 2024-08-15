@@ -1,2 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
-This week we learned about maps in class. We learned how to extract maps from downloaded files and websites.
+This week we learned about maps in class. We learned how to extract maps from downloaded files and websites and apply that to our data. We learned how to change the colors of the map and how to calculate distances to a certain point with maps. Most of these new content were hard for me to understand and get used to in the beginning.

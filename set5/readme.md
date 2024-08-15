@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+This week I continued working on set 4. I understand better of what functions to use for different resources. Applying what I learned from set 1-3, simple programming stuff such as loops, if conditions, try except, and more into data centric codes became clearer. I also finalized the data set that I used for my final data project which was sydney airbnb listings from insideairbnb.

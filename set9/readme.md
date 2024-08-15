@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+This week I made progress on my data project. I experimented on making graphs between the columns of my data to see whether or not I find anything that is interesting to discuss. I did find the discovery of airbnb hosts having hundreds of listing to be common, which was surprising as initially I thought that it would be a "small business" esc industry. I didn't use this for my final project though, I ended up finding a topic question that can be explored more.

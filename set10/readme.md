@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+I continued progressing on my data project through doing scatter plot graphs, making pie chart for the verified and unverified hosts, doing line graphs and learned how to make box and whiskers graph too. I encountered a lot of errors such as my maps file not working, converting the data types of columns and more. However this is all resolved in the following days and week.
